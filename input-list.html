@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>TEST</title>
+</head>
+<body>
+	<ul id='list'>
+	</ul>
+	<input type='button' value='add to list' id='add' />
+
+<script type="text/javascript">
+	
+	function remove(current){
+		current.parentNode.remove()
+	}
+
+	document.getElementById("add").onclick = function() {
+
+		var e = document.createElement('li');
+		e.innerHTML = "<input type='text' name='option' /> <span class='remove' onclick='remove(this)'>X</span> <br/>";
+	    //Now construct a quick list element
+
+	    //Now use appendChild and add it to the list!
+	    document.getElementById("list").appendChild(e);
+	}
+</script>
+</body>
+</html>
